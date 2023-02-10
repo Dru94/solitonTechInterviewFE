@@ -10,10 +10,7 @@ function CreateFleet() {
     const navigate = useNavigate()
 
     const onSubmit = (e)=>{
-        const regData = {
-            name:e.name,
-            driver:[]
-        }
+
 
         axios.post('http://127.0.0.1:8000/create-fleet', regData)
         .then((res) => {   
