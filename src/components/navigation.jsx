@@ -37,7 +37,6 @@ function Navigation() {
                 <NavLink href="/cars">Cars</NavLink>
               </NavItem>
             </Nav>
-            <NavbarText>Simple Text</NavbarText>
           </Collapse>
         </Navbar>
       </div>

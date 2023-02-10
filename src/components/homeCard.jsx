@@ -18,7 +18,7 @@ function HomeCard(props) {
             </CardSubtitle>
             <CardText>
                 <p>{props.desc1}: <span style={{fontWeight:"bold"}}>{props.desc1_number}</span></p>
-                <p>{props.desc2}: <span style={{fontWeight:"bold"}}>{props.desc2_number}</span></p>
+
             </CardText>
             <Link to="#" style={{color:props.color}}>View Details</Link>
         </CardBody>

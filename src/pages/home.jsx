@@ -36,14 +36,12 @@ function Home() {
     }, [])
 
   return (
-    <div className='container'>
+    <div className='container' style={{height:"100%"}}>
         <div className='homecard'>
             <HomeCard 
                 title="Fleet"
                 desc1 = "Fleet Total" 
                 desc1_number={fleetnum}
-                desc2 = "Biggest Fleet"
-                desc2_number = "Bugolobi"
                 bgcolor = "#5EB562"
                 color="white"
             />
@@ -51,8 +49,6 @@ function Home() {
                 title="Drivers"
                 desc1 = "Driver Total" 
                 desc1_number={drivernum}
-                desc2 = "Latest Driver: "
-                desc2_number = "Sam Mugumya"
                 bgcolor = "#3791EE"
                 color="white"
             />
@@ -76,7 +72,7 @@ function Home() {
                                 Name
                             </th>
                             <th>
-                                Number of Cars
+                                Plate Number
                             </th>
                             </tr>
                         </thead>
@@ -89,7 +85,7 @@ function Home() {
                                             {f.manufacturer}
                                         </td>
                                         <td>
-                                            10
+                                            {f.plate_number}
                                         </td>
                                     </tr>
                                     )
@@ -100,40 +96,6 @@ function Home() {
                 </CardBody>
             </Card>
         </div>
-
-        {/* <div className='carsDiv'>
-            <h3 style={{fontWeight:"bold"}}>Cars.</h3>
-            <Card>
-                <CardBody>
-                    <Table>
-                        <thead>
-                            <tr>
-                            <th>
-                                Manufacturer
-                            </th>
-                            <th>
-                                Number of Cars
-                            </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {
-                                cars.map((c)=>{
-                                    return(
-                                        <tr>
-                                            <td>
-                                                {c.manufacturer}
-                                            </td>
-                                            <td>200</td>
-                                        </tr>
-                                    )
-                                })
-                            }
-                        </tbody>
-                    </Table>
-                </CardBody>
-            </Card>
-        </div> */}
 
         <div className='driverDiv'>
             <div className='fleetTitle'>
@@ -152,7 +114,7 @@ function Home() {
                                 Name
                             </th>
                             <th>
-                                Date Hired
+                                contact
                             </th>
                             </tr>
                         </thead>
@@ -162,7 +124,7 @@ function Home() {
                                     return(
                                     <tr>
                                         <td>{d.name}</td>
-                                        <td>{d.date_hired}</td>
+                                        <td>{d.phone_number}</td>
                                     </tr>)
                                 })
                             }
