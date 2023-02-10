@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Card, CardBody, Button } from 'reactstrap'
 import axios from 'axios';
 import { useForm } from "react-hook-form";
@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 function CreateFleet() {
-    const {register, handleSubmit, errors } = useForm();
+    const {register, handleSubmit } = useForm();
     const navigate = useNavigate()
 
     const onSubmit = (e)=>{
@@ -18,7 +18,7 @@ function CreateFleet() {
         axios.post('http://127.0.0.1:8000/create-fleet', regData)
         .then((res) => {   
  
-            if(res.status == 201){
+            if(res.status === 201){
                 console.log("Success")
                 navigate("/")
             }

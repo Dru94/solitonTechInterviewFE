@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { Button, Card, CardBody } from 'reactstrap'
 import axios from 'axios';
 import { useForm } from "react-hook-form";
-import { Navigate, useNavigate } from 'react-router-dom';
+
 
 function CreateCar() {
-    const navigate = useNavigate()
-    const {register, handleSubmit, errors } = useForm();
+
+    const {register, handleSubmit } = useForm();
     const [drivers, setDrivers] = useState([]);
 
 
@@ -21,7 +21,7 @@ function CreateCar() {
         for(let i=0; i < e.drivers.length; i++){
             
             for(let x=0; x < drivers.length; x++){
-                if(e.drivers[i] == drivers[x].id){
+                if(e.drivers[i] === drivers[x].id){
                     const driverDetail = {
                         "name":drivers[x].name,
                         "phone_number":drivers[x].phone_number,
@@ -45,7 +45,7 @@ function CreateCar() {
     useEffect(()=>{
         axios.get("http://127.0.0.1:8000/drivers")
         .then((res)=>{
-            if(res.status == 200){
+            if(res.status === 200){
                 setDrivers(res.data)
             }
         })
