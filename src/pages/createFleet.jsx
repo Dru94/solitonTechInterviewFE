@@ -14,7 +14,6 @@ function CreateFleet() {
             name:e.name,
             driver:[]
         }
-        regData[driver].push(e.)
 
         axios.post('http://127.0.0.1:8000/create-fleet', regData)
         .then((res) => {   
