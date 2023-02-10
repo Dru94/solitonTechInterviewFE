@@ -1,0 +1,36 @@
+.homecard{
+    background-color: #161F57;
+    height:50vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    justify-content: space-around;
+}
+.fleetDiv{
+    background-color:#F0F2F5;
+    padding: 50px;
+ 
+}
+.carsDiv{ 
+    background-color:#F0F2F5;
+    padding: 50px;
+}
+.driverDiv{ 
+    background-color:#F0F2F5;
+    padding: 50px;
+    height: 550px;
+}
+.footer{
+    background-color: #161F57;
+    height: 70px;
+    width: 100%;
+}
+.fleetTitle{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+.addFleet{
+    padding: 50px;
+}
